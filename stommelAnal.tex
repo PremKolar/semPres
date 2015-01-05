@@ -1,0 +1,102 @@
+% ######################################################################
+\begin{frame}
+\frametitle{Bewegunsgleichungen}
+%%....................................................................
+\begin{align}
+	\rho \Dpr{\vec{u}}{t} 
+	=
+	&- 2\vec{\Omega} \times \vec{u} -\;\;\;\;\nabla p  \;\;\;\;\;\;\;\;    + \nabla \cdot\boldsymbol{\mathsf{T}}\;\;\;\; +\;\;\; \rho\vec{g} \nonumber \\
+	&-      Coriolis                -    Druckgrad.+             Reibung                 +   Gravi. 
+\end{align}
+
+%%....................................................................
+\begin{align}
+	\Dpr{m}{t}
+	&=
+	0
+\end{align}
+%%....................................................................
+
+%%....................................................................
+\end{frame}
+% ######################################################################
+
+
+
+% ######################################################################
+\begin{frame}[noframenumber]
+\frametitle{Approximationen/Manipulationen}
+\end{frame}
+\begin{frame}
+\frametitle{Approximationen/Manipulationen}
+\begin{itemize}
+	\item<1-> 
+	mesoskalige Turbulenz parametrisiert \\
+	\textit{Reynolds averaging}
+	\item<2-> 
+	Corioliskraft linearisiert\\
+	 $\vec{f} = f_{0} + \beta y$
+	\item<3->
+	Hydrostatische Approximation \\
+	$\rho\vec{g} = -\dpr{p}{z}$ %(nur noch horizontale Kräfte übrig)
+	\item<4->
+	zeitlich konstant \\
+	$\dpr{\vec{u}}{t} = 0$
+	\item<5->
+	Inkompressibiltät \\
+	Massenerhaltung $\rightarrow$ Volumenerhaltung
+	\item<6->
+	vertikal integrieren \\
+	$\int_{H} \vec{u} \dint{z}=	\vec{U}$
+\end{itemize}
+\end{frame}
+% ######################################################################
+
+
+% ######################################################################
+\begin{frame}
+\frametitle{übrig bleibt...}
+%%....................................................................
+\begin{align}
+	0
+	=
+	%&      -f\vec{z} \times \vec{U}\; -    gH\grad{h} \;\;\;\;\;\;\; + \mathbf{\tau}_{s}\;\;\;\;\; - \mathbf{\tau}_{b}\;\;\;\;\;\;\;\;\;\;\;\;\; \;\;\;\; + A\grad^{2} \vec{U}  \nonumber \\
+	%&-      Coriolis                -    Druckgrad.  +  Wind  - Bodenreibung  + laterale\; Reibung          \nonumber
+	&  -\l f_{0} + \beta y \r \vec{z} \times \vec{U} -    gH\grad{h}  + \mathbf{\tau}_{s} - \mathbf{\tau}_{b}+ A\grad^{2} \vec{U}  \nonumber 
+\end{align}
+
+%%....................................................................
+\begin{align}
+	\Dpr{\vec{U}}{t}
+	&=
+	0\nonumber 
+\end{align}
+%%....................................................................
+%%....................................................................
+\end{frame}
+% ######################################################################
+
+% ######################################################################
+\begin{frame}
+\frametitle{Curl Operation}
+%%....................................................................
+\begin{align}
+	0
+	=&  \grad \times \left[\;\;\;\;\;   -\vec{f} \times \vec{U}   -    g H \grad{h} + \mathbf{\tau}_{s} - \mathbf{\tau}_{b} + A  \grad^{2} \vec{U} \;\;\;\;\;   \right]  \nonumber \\
+     &     \nonumber 
+\end{align}
+%%....................................................................
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Curl Operation}
+%%....................................................................
+\begin{align}
+	0
+	=&  \grad \times \left[ \;\;\;\;\;   -\vec{f} \times \vec{U}   -    g H \grad{h} + \mathbf{\tau}_{s} - \mathbf{\tau}_{b} + A  \grad^{2} \vec{U}  \;\;\;\;\;   \right]  \nonumber \\
+	=& \;\;\;\;\; \;\;\; -\beta \vec{V}  + \vort{\mathbf{\tau}_{s}} - \vort{\mathbf{\tau}_{b}} + A  \grad \times \grad^{2} \vec{U}    \nonumber 
+\end{align}
+%%....................................................................
+\end{frame}
+% ######################################################################

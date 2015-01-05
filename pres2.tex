@@ -1,0 +1,57 @@
+\documentclass{beamer}
+\setbeamertemplate{footline}{\insertframenumber/\inserttotalframenumber \; - \insertsection/\insertsubsection}
+\setbeamertemplate{frametitle}[default][center]
+\input{SUBS/usepackage.tex}
+\input{SUBS/newcommands.tex}
+\graphicspath{ {./FIGS/}}
+\begin{document}
+%%
+\title{Algorithmen in der Direkten Anwendung}
+%\subtitle{Update}
+\author{NK}
+%
+\section*{Überblick}
+\input{introduction.tex}
+
+
+% ######################################################################
+\section{Teil I - Westliche Randströme}
+
+
+
+\subsection{Analytisch}
+\input{stommelAnal.tex}
+
+\subsection{Numerisch}
+\input{stommelNume.tex}
+% ######################################################################
+
+
+% ######################################################################
+\section{Teil II - Geostrophische Ozeanwirbel}
+%\input{eddyIntro.tex} TODO global bild
+\subsection{Was ist ein \protect\textit{Eddy}?}
+\input{eddyGeostro.tex}
+
+\subsection{\protect\textit{detection and tracking}-Algorithmus}
+\input{eddyAlgo.tex}
+% ######################################################################
+
+
+
+
+%\section{Methods}
+%\subsection{Detection}
+%\input{detection.tex}
+%\subsection{Tracking}
+%\input{tracking.tex}
+%\section{New Results}
+%\input{results.tex}
+%\section{next..}
+%\input{todo.tex}
+
+
+\end{document}
+
+
+
