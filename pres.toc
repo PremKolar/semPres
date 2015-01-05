@@ -1,0 +1,6 @@
+\beamer@endinputifotherversion {3.33pt}
+\beamer@sectionintoc {2}{Methods}{3}{0}{1}
+\beamer@subsectionintoc {2}{1}{Detection}{3}{0}{1}
+\beamer@subsectionintoc {2}{2}{Tracking}{12}{0}{1}
+\beamer@sectionintoc {3}{New Results}{29}{0}{2}
+\beamer@sectionintoc {4}{next..}{33}{0}{3}

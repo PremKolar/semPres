@@ -1,0 +1,37 @@
+\documentclass{beamer}
+\setbeamertemplate{footline}{\insertframenumber/\inserttotalframenumber \; - \insertsection/\insertsubsection}
+\setbeamertemplate{frametitle}[default][center]
+\input{SUBS/usepackage.tex}
+\input{SUBS/newcommands.tex}
+\graphicspath{ {./FIGS/}}
+\begin{document}
+%%
+\title{Meso-Scale Eddy Tracking via Model- and Satellite-SSH Data}
+\subtitle{Update}
+\author{NK}
+%
+\section*{Introduction}
+\input{introduction.tex}
+\section{Methods}
+\subsection{Detection}
+\input{detection.tex}
+\subsection{Tracking}
+\input{tracking.tex}
+\section{New Results}
+\input{results.tex}
+\section{next..}
+\input{todo.tex}
+
+\begin{frame}
+\begin{center}
+\centering
+\href{run:mplayer ./MOViq55RoL4MadShort.avi}{
+\includegraphics[scale=0.25]{MOViq55RoL4MadShort.jpeg}}
+\end{center}
+\end{frame}
+
+
+\end{document}
+
+
+

@@ -1,0 +1,201 @@
+
+Integrating \eqref{eq:Emech1} over a closed Volume with standard boundary conditions yields a Eularian equation
+for the change in total mechanical energy of the domain (Note that the advection term does just that - \textit{advect}.
+It has no contribution to the total change of energy).
+%%....................................................................
+\begin{equation}\begin{split}
+\frac{1}{2}\left(
+	\int_{V} \frac{\partial \vec{u}^2}{\partial t}  \; \mathrm{d}V
+  +
+	\int_{V} \vec{u} \cdot \grad \vec{u}^2 \; \mathrm{d}V
+	\right)
+	&=
+	\int_{V} \vec{u}\cdot \nu  \vec{\nabla}^{2} \vec{u}  \; \mathrm{d}V \\
+	%%--------------------------------------------------------------------
+	\int_{V} \frac{\partial \Em}{\partial t}  \; \mathrm{d}V
+	&=
+	\int_{V} \nu\left(
+	\frac{1}{2}\grad^2 \vec{u}^2 - \norm{\grad \vec{u}}^2
+	\right)  \; \mathrm{d}V
+\end{split}\end{equation}
+%%....................................................................
+
+
+%%####################################################################
+%%####################################################################
+
+
+%%####################################################################
+%%####################################################################
+
+
+\section{2D-Turbulence}
+oiug
+\subsection{Aspect Ratio}
+\subsection{Enstrophy Conservation}
+Without a third dimension, vorticity can no longer be altered by stretching or tilting.
+\eqref{eq:vort2} then reduces to:
+\begin{equation}\begin{split}
+	\frac{D \omega_{a}}{D t}
+	&=
+	\nu \grad^{2} \omega
+\end{split}\end{equation}
+In other words, in absence of friction, besides energy, now also vorticity is materially conserved.
+\subsubsection{}
+
+
+\begin{equation}\begin{split}
+	\int_A \omega \frac{D \omega_{a}}{D t}\; \mathrm{d}A
+	&=
+	\nu\int_A  \omega \grad^{2} \omega\; \mathrm{d}A\\
+	\frac{\partial \Enstro}{\partial t}
+	=
+	\frac{\partial }{2\partial t} \int_A \omega^2 \; \mathrm{d}A
+	&=
+	\nu\int_A \frac{1}{2}\grad^{2} \omega^{2} - \norm{\grad \omega}^2  \; \mathrm{d}A \\
+	&=
+	\frac{\nu}{2}\oint_A \grad \omega^{2} \cdot \mathrm{d}\vec{s}
+	- \int_A\norm{\grad \omega}^2  \; \mathrm{d}A \label{eq:enst1}	\\
+\end{split}\end{equation}
+
+
+\begin{equation}\begin{split}
+	\int_A \omega \frac{D \omega_{a}}{D t}\; \mathrm{d}A
+	&=
+	\nu\int_A  \omega \grad^{2} \omega\; \mathrm{d}A\\
+	\frac{\partial \Enstro}{\partial t}
+	=
+	\frac{\partial }{2\partial t} \int_A \omega^2 \; \mathrm{d}A
+	&=
+	\nu\int_A \omega  \frac{\partial }{\partial x_i} \vec{e}_i \frac{\partial  \omega}{\partial x_i} \vec{e}_i\; \mathrm{d}A \\
+	&=
+	\nu\int_A \omega  \frac{\partial^2  \omega}{\partial x_i^2} \; \mathrm{d}A \\
+	%%--------------------------------------------------------------------
+	&=
+	\nu\int_A \frac{1}{2} \frac{\partial^2 \omega^2 }{\partial x_i^2}  - \left(\frac{\partial  \omega}{\partial x_i} \right)^2 \; \mathrm{d}A \label{eq:enst1}
+\end{split}\end{equation}
+If we now consider an infinite domain with fading $\vec{u}$ away from the center,
+the first RHS-term of \eqref{eq:enst1} vanishes, leaving:
+\begin{equation}\begin{split}
+	\frac{\partial \Enstro}{\partial t}
+	&=
+	- \int_A \nu\left(\frac{\partial  \omega}{\partial x_i} \right)^2 \; \mathrm{d}A \\
+	&=
+	- \int_A \nu\norm{ \grad \omega}^2 \; \mathrm{d}A
+\end{split}\end{equation}
+
+
+
+In 2 dimensions enstrophy can also be rewritten as follows:
+%%....................................................................
+\begin{equation}\begin{split}
+\Enstro
+&=
+\int_{V} \norm{\vec{\omega}}^{2}  \; \mathrm{d}V\\
+&=
+\int_{V} \omega^{2}  \; \mathrm{d}V\\
+&=
+\int_{V} \left( \frac{\partial v}{\partial x} - \frac{\partial u}{\partial y} \right)^2  \; \mathrm{d}V\\
+&=
+\int_{V} \left(\frac{\partial v}{\partial x}\right)^2
+-2\frac{\partial v}{\partial x} \frac{\partial u}{\partial y}
++ \left(\frac{\partial u}{\partial y} \right)^2  \; \mathrm{d}V\\
+&=
+\int_{V} \left(\frac{\partial v}{\partial x}\right)^2
++ \left(\frac{\partial u}{\partial y} \right)^2
+-2\frac{\partial v}{\partial x} \frac{\partial u}{\partial y}
++ \left( \div \vec{u} \right)^2
+  \; \mathrm{d}V\\
+&=
+\int_{V} \left(\frac{\partial v}{\partial x}\right)^2
++ \left(\frac{\partial u}{\partial y} \right)^2
++\left(\frac{\partial v}{\partial y}\right)^2
++ \left(\frac{\partial u}{\partial x} \right)^2
+  \; \mathrm{d}V\\
+  &=
+\int_{V}
+\norm{\grad \vec{u}}^2
+\; \mathrm{d}V\\
+  &=
+\int_{V}
+\frac{1}{2} \grad^2 \vec{u}^2 -\vec{u} \cdot \grad^2 \vec{u}
+\; \mathrm{d}V\\
+  &=
+\frac{1}{2}\oint_{A}   \grad \vec{u}^2 \cdot  \; \mathrm{d}\vec{s}
+-\int_{V}\vec{u} \cdot \grad^2 \vec{u}  \; \mathrm{d}V\\
+  &=
+\int_{V}
+-\vec{u} \cdot \grad^2 \vec{u}
+\; \mathrm{d}V\\
+\end{split}\end{equation}
+\textit{...under appropriate boundary conditions} WHY???\\
+%%--------------------------------------------------------------------
+combinging ... and ... reveals the coupling	that energy dissipation is proportional to the total enstrophy of the system.
+And that
+
+
+\begin{equation}\begin{split}
+	\int_{V}\frac{\partial E_{m}}{\partial t} \; \mathrm{d}V
+	&=
+	-\nu \int_{V} \norm{\vec{\omega}}^{2}  \; \mathrm{d}V \\
+	%%--------------------------------------------------------------------
+	&=
+	-\nu \Enstro\\
+	\int_{V}\frac{\partial E_{m}}{\partial t} \; \mathrm{d}V
+	&=
+	\grad^{2} \frac{D \Enstro}{D t}
+\end{split}\end{equation}
+
+
+
+\chapter{junk}
+
+
+
+%%....................................................................
+\begin{equation}\begin{split}
+	\frac{\partial \enstro}{\partial t}
+	+
+	\vec{u} \cdot \grad \enstro
+	&=
+	-\nu \grad^{2} \enstro\\
+	\frac{\partial \norm{\grad \vec{u}}^{2}}{\partial t}
+	+
+	\vec{u} \cdot \grad \norm{\grad \vec{u}}^{2}
+	&=
+	-\nu \grad^{2} \norm{\grad \vec{u}}^{2}\\
+	\frac{\partial }{\partial t} \left(\frac{\partial u_{i}}{\partial x_{j}}\right)^{2}
+	+
+	u_{k}  \frac{\partial}{\partial x_{k}} \left(\frac{\partial u_{i}}{\partial x_{j}}\right)^{2}
+	&=
+	-\nu \grad^{2}  \left(\frac{\partial u_{i}}{\partial x_{j}}\right)^{2}\\
+\end{split}\end{equation}
+
+
+\begin{equation}\begin{split}
+	\frac{\partial \enstro}{\partial t}
+&=
+	-
+	\vec{u} \cdot \grad \enstro
+	-\nu \grad^{2} \enstro{}
+	+\vec{\omega}_{a}\cdot \left( \vec{\vec{\omega}_{a}} \cdot \grad \right) \vec{\vec{u}}\\
+&\sim-
+	\frac{U^{3}}{L^{3}}
+	- \frac{\nu U^{2}}{L^{4}}
+	+ \frac{U^{3}}{L^{3}}\\
+\end{split}\end{equation}
+
+\begin{equation}\begin{split}
+	\frac{\partial E_{m}}{\partial t}
+&\sim{}
+-	\frac{U^{3}}{L}
+	- \frac{\nu U^{2}}{L^{2}} \\
+	&\sim
+	\frac{\partial \enstro}{\partial t} L^{2}
+\end{split}\end{equation}
+
+
+
+
+
+

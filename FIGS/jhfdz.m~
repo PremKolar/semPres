@@ -1,0 +1,68 @@
+%%
+R=1;
+x=R*linspace(0,1,1000);
+
+sigma=.2;
+A=1;
+ssh=A*exp(-.5* x.^2/sigma^2);
+dx=diff(x,1);
+v=diff(ssh,1)./dx;
+om=diff(v,1)./dx;
+%%
+clf
+plot(x,ssh,x(1:end-1),v)
+hold on
+
+%%
+addpath(genpath('../../pop/'))
+
+
+s=-grids.sshRaw(1500:1:1630,550:1:670);
+
+s=s-min(s(:));
+s=s/max(s(:));
+s=s-.35;
+s=smooth2a(s,5)
+
+om=smooth2a((del2(s)),5)
+ens=(del2(s)).^2
+
+%%
+clf
+
+contourf(s,50,'linewidth',0.0001);
+hold on
+contour(om,[0 0],'color','black','linewidth',2);
+subplot(212)
+
+colorbar
+hold on
+contour(s,30)
+view(2)
+axis tight
+
+
+CM=doublemap([min(s(:)) 0 max(s(:))],autumn(200),winter(200),[.5 .5 .5],50)
+colorbar('ytick',[0])
+title('\psi')
+axis off
+
+%%
+
+clf
+contourf(log10(ens),50);shading flat
+clf
+contourf((om),50);shading flat
+contourf(ens,50,'linewidth',0.0001);
+hold on
+contour(s,30)
+view(2)
+axis tight
+
+
+CM=doublemap([min(s(:)) 0 max(s(:))],autumn(200),winter(200),[.5 .5 .5],50)
+colorbar('ytick',[0])
+title('\psi')
+axis off
+%%
+savefig('./',100,600,800,'psi')
