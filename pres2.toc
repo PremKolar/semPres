@@ -1,8 +1,8 @@
-\beamer@endinputifotherversion {3.10pt}
+\beamer@endinputifotherversion {3.07pt}
 \select@language {english}
 \beamer@sectionintoc {2}{Teil I - Westliche Randströme}{3}{0}{1}
 \beamer@subsectionintoc {2}{1}{Analytisch}{3}{0}{1}
-\beamer@subsectionintoc {2}{2}{Numerisch}{14}{0}{1}
-\beamer@sectionintoc {3}{Teil II - Geostrophische Ozeanwirbel}{14}{0}{2}
-\beamer@subsectionintoc {3}{1}{Was ist ein \textit {Eddy}?}{14}{0}{2}
-\beamer@subsectionintoc {3}{2}{\textit {detection and tracking}-Algorithmus}{14}{0}{2}
+\beamer@subsectionintoc {2}{2}{Numerisch}{25}{0}{1}
+\beamer@sectionintoc {3}{Teil II - Geostrophische Ozeanwirbel}{25}{0}{2}
+\beamer@subsectionintoc {3}{1}{Was ist ein \textit {Eddy}?}{25}{0}{2}
+\beamer@subsectionintoc {3}{2}{\textit {detection and tracking}-Algorithmus}{25}{0}{2}

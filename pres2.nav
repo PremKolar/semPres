@@ -1,4 +1,4 @@
-\beamer@endinputifotherversion {3.10pt}
+\beamer@endinputifotherversion {3.07pt}
 \headcommand {\sectionentry {1}{Überblick}{1}{Überblick}{0}}
 \headcommand {\beamer@sectionpages {1}{0}}
 \headcommand {\beamer@subsectionpages {1}{0}}
@@ -14,22 +14,38 @@
 \headcommand {\beamer@framepages {3}{3}}
 \headcommand {\slideentry {2}{1}{2}{4/4}{Analytisch}{0}}
 \headcommand {\beamer@framepages {4}{4}}
-\headcommand {\slideentry {2}{1}{3}{5/10}{Analytisch}{0}}
-\headcommand {\beamer@framepages {5}{10}}
-\headcommand {\slideentry {2}{1}{4}{11/11}{Analytisch}{0}}
-\headcommand {\beamer@framepages {11}{11}}
-\headcommand {\slideentry {2}{1}{5}{12/12}{Analytisch}{0}}
+\headcommand {\slideentry {2}{1}{3}{5/11}{Analytisch}{0}}
+\headcommand {\beamer@framepages {5}{11}}
+\headcommand {\slideentry {2}{1}{4}{12/12}{Analytisch}{0}}
 \headcommand {\beamer@framepages {12}{12}}
-\headcommand {\slideentry {2}{1}{6}{13/13}{Analytisch}{0}}
+\headcommand {\slideentry {2}{1}{5}{13/13}{Analytisch}{0}}
 \headcommand {\beamer@framepages {13}{13}}
-\headcommand {\beamer@subsectionentry {0}{2}{2}{14}{Numerisch}}\headcommand {\beamer@subsectionpages {3}{13}}
-\headcommand {\sectionentry {3}{Teil II - Geostrophische Ozeanwirbel}{14}{Teil II - Geostrophische Ozeanwirbel}{0}}
-\headcommand {\beamer@sectionpages {3}{13}}
-\headcommand {\beamer@subsectionpages {14}{13}}
-\headcommand {\beamer@subsectionentry {0}{3}{1}{14}{Was ist ein \textit {Eddy}?}}\headcommand {\beamer@subsectionpages {14}{13}}
-\headcommand {\beamer@subsectionentry {0}{3}{2}{14}{\textit {detection and tracking}-Algorithmus}}\headcommand {\beamer@subsectionpages {14}{13}}
-\headcommand {\beamer@partpages {1}{14}}
-\headcommand {\beamer@subsectionpages {14}{14}}
-\headcommand {\beamer@sectionpages {14}{14}}
-\headcommand {\beamer@documentpages {14}}
-\headcommand {\def \inserttotalframenumber {8}}
+\headcommand {\slideentry {2}{1}{6}{14/14}{Analytisch}{0}}
+\headcommand {\beamer@framepages {14}{14}}
+\headcommand {\slideentry {2}{1}{7}{15/15}{Analytisch}{0}}
+\headcommand {\beamer@framepages {15}{15}}
+\headcommand {\slideentry {2}{1}{8}{16/16}{Analytisch}{0}}
+\headcommand {\beamer@framepages {16}{16}}
+\headcommand {\slideentry {2}{1}{9}{17/17}{Analytisch}{0}}
+\headcommand {\beamer@framepages {17}{17}}
+\headcommand {\slideentry {2}{1}{10}{18/20}{Analytisch}{0}}
+\headcommand {\beamer@framepages {18}{20}}
+\headcommand {\slideentry {2}{1}{11}{21/21}{Analytisch}{0}}
+\headcommand {\beamer@framepages {21}{21}}
+\headcommand {\slideentry {2}{1}{12}{22/22}{Analytisch}{0}}
+\headcommand {\beamer@framepages {22}{22}}
+\headcommand {\slideentry {2}{1}{13}{23/23}{Analytisch}{0}}
+\headcommand {\beamer@framepages {23}{23}}
+\headcommand {\slideentry {2}{1}{14}{24/24}{Analytisch}{0}}
+\headcommand {\beamer@framepages {24}{24}}
+\headcommand {\beamer@subsectionentry {0}{2}{2}{25}{Numerisch}}\headcommand {\beamer@subsectionpages {3}{24}}
+\headcommand {\sectionentry {3}{Teil II - Geostrophische Ozeanwirbel}{25}{Teil II - Geostrophische Ozeanwirbel}{0}}
+\headcommand {\beamer@sectionpages {3}{24}}
+\headcommand {\beamer@subsectionpages {25}{24}}
+\headcommand {\beamer@subsectionentry {0}{3}{1}{25}{Was ist ein \textit {Eddy}?}}\headcommand {\beamer@subsectionpages {25}{24}}
+\headcommand {\beamer@subsectionentry {0}{3}{2}{25}{\textit {detection and tracking}-Algorithmus}}\headcommand {\beamer@subsectionpages {25}{24}}
+\headcommand {\beamer@partpages {1}{25}}
+\headcommand {\beamer@subsectionpages {25}{25}}
+\headcommand {\beamer@sectionpages {25}{25}}
+\headcommand {\beamer@documentpages {25}}
+\headcommand {\def \inserttotalframenumber {16}}

@@ -35,7 +35,7 @@
 	\textit{Reynolds averaging}
 	\item<2-> 
 	Corioliskraft linearisiert\\
-	 $\vec{f} = f_{0} + \beta y$
+	 $\vec{f}(y) = f_{0} + \beta y$
 	\item<3->
 	Hydrostatische Approximation \\
 	$\rho\vec{g} = -\dpr{p}{z}$ %(nur noch horizontale Kräfte übrig)
@@ -44,32 +44,49 @@
 	$\dpr{\vec{u}}{t} = 0$
 	\item<5->
 	Inkompressibiltät \\
-	Massenerhaltung $\rightarrow$ Volumenerhaltung
+	Massenerhaltung $\rightarrow$ Volumenerhaltung ($\rho = const$)
 	\item<6->
+	Horizontale Geschwindigkeiten viel größer als vertikale \\
+	$w=0$
+	\item<7->
 	vertikal integrieren \\
 	$\int_{H} \vec{u} \dint{z}=	\vec{U}$
 \end{itemize}
 \end{frame}
 % ######################################################################
 
+\begin{frame}
+	\frametitle{Viereckiges flaches Honigbecken}
+	% TODO bild aus BSC atlantic -> bild AUS BSC viereck
+\end{frame}
 
 % ######################################################################
 \begin{frame}
 \frametitle{übrig bleibt...}
 %%....................................................................
 \begin{align}
+	\rho \Dpr{\vec{u}}{t} 
+	=
+	&- 2\vec{\Omega} \times \vec{u} -\;\;\;\;\nabla p  \;\;\;\;\;\;\;\;    + \nabla \cdot\boldsymbol{\mathsf{T}}\;\;\;\; +\;\;\; \rho\vec{g} \nonumber 
+\end{align}
+%%....................................................................
+\begin{center}
+	$\Downarrow$
+\end{center}
+%%....................................................................
+\begin{align}
 	0
 	=
 	%&      -f\vec{z} \times \vec{U}\; -    gH\grad{h} \;\;\;\;\;\;\; + \mathbf{\tau}_{s}\;\;\;\;\; - \mathbf{\tau}_{b}\;\;\;\;\;\;\;\;\;\;\;\;\; \;\;\;\; + A\grad^{2} \vec{U}  \nonumber \\
 	%&-      Coriolis                -    Druckgrad.  +  Wind  - Bodenreibung  + laterale\; Reibung          \nonumber
-	&  -\l f_{0} + \beta y \r \vec{z} \times \vec{U} -    gH\grad{h}  + \mathbf{\tau}_{s} - \mathbf{\tau}_{b}+ A\grad^{2} \vec{U}  \nonumber 
+	&  -\l f_{0} + \beta y \r \vec{z} \times \vec{U} -    gH\grad{h}  + \mathbf{\tau}_{s} - \mathbf{\tau}_{b}+ A\grad^{2} \vec{U} 
 \end{align}
 
 %%....................................................................
 \begin{align}
 	\Dpr{\vec{U}}{t}
 	&=
-	0\nonumber 
+	0
 \end{align}
 %%....................................................................
 %%....................................................................
@@ -88,15 +105,169 @@
 %%....................................................................
 \end{frame}
 
-
 \begin{frame}
 \frametitle{Curl Operation}
 %%....................................................................
 \begin{align}
 	0
-	=&  \grad \times \left[ \;\;\;\;\;   -\vec{f} \times \vec{U}   -    g H \grad{h} + \mathbf{\tau}_{s} - \mathbf{\tau}_{b} + A  \grad^{2} \vec{U}  \;\;\;\;\;   \right]  \nonumber \\
-	=& \;\;\;\;\; \;\;\; -\beta \vec{V}  + \vort{\mathbf{\tau}_{s}} - \vort{\mathbf{\tau}_{b}} + A  \grad \times \grad^{2} \vec{U}    \nonumber 
+	=&  \grad \times \left[ \;\;\;\;\;   -\vec{f}(y) \times \vec{U}   -    g H \grad{h} + \mathbf{\tau}_{s} - \mathbf{\tau}_{b} + A  \grad^{2} \vec{U}  \;\;\;\;\;   \right]  \nonumber \\
+	=& \;\;\;\;\; \;\;\; -\beta V  + \vort{\l \mathbf{\tau}_{s}- \mathbf{\tau}_{b} \r}  + A  \grad \times \grad^{2} \vec{U}    \nonumber 
 \end{align}
 %%....................................................................
 \end{frame}
 % ######################################################################
+
+% ######################################################################
+\begin{frame}
+\frametitle{Stromfunktion}
+%%....................................................................
+\begin{align}
+ \vec{U}&=\gradt \psi(x,y) 
+\end{align}
+%%...................................................................
+soll heißen...
+%%....................................................................
+\begin{align}
+	U &= -\dpr{\psi}{y}  \nonumber  \\
+	V &= \;\;\; \dpr{\psi}{x}   \nonumber 
+\end{align}
+%%....................................................................
+\end{frame}
+% ######################################################################
+
+% ######################################################################
+\begin{frame}
+\frametitle{Stromfunktion}
+%%....................................................................
+\begin{align}
+		0
+	=& -\beta V  + \vort{\l \mathbf{\tau}_{s}- \mathbf{\tau}_{b} \r}  + A  \grad \times \grad^{2} \vec{U}    \nonumber 
+\end{align}
+%%....................................................................
+%\begin{center}
+	%$\Downarrow$
+%\end{center}
+%%%....................................................................
+%\begin{align}
+		%0
+	%=& -\beta \dpr{\psi}{x}  + \vort{\l \mathbf{\tau}_{s}- \mathbf{\tau}_{b} \r}  + A  \grad \times \grad^{2} \gradt \psi   \nonumber 
+%\end{align}
+%%%....................................................................
+\begin{center}
+	$\Downarrow$
+\end{center}
+%%....................................................................
+\begin{align}
+		0
+	=& -\beta \dpr{\psi}{x}  + \vort{\l \mathbf{\tau}_{s}- \mathbf{\tau}_{b} \r}  + A  \grad^{4} \psi  
+\end{align}
+%%....................................................................
+\end{frame}
+% ######################################################################
+
+% ######################################################################
+\begin{frame}
+\frametitle{weitere Approximationen}
+\begin{itemize}
+	\item<1-> 
+	Bodenreibung proportional zu $\vec{U}$ \\
+	$\vec{\tau_b} = R \vec{U}$
+	\item<2->
+	keine laterale Reibung! \\
+	$A  \grad^{4} \psi  = 0 $
+	\item<3->
+	Windstress sinusoidale Funktion von $y$ \\
+	$\vec{\tau_s} = F \cos{(\pi y / B)}$	
+\end{itemize}
+\end{frame}
+% ######################################################################
+
+% ######################################################################
+\begin{frame}
+\frametitle{weitere Approximationen}
+%%....................................................................
+\begin{align}
+		0
+	=& -\beta \dpr{\psi}{x}  + \vort{\l \mathbf{\tau}_{s}- \mathbf{\tau}_{b} \r}  + A  \grad^{4} \psi \nonumber  
+\end{align}
+%%....................................................................
+\begin{center}
+	$\Downarrow$
+\end{center}
+%%....................................................................
+\begin{align}
+		0
+	=& -\beta \dpr{\psi}{x}  - R \vort{U} - F \grad \times  \cos{(\pi y / B)} \nonumber   \\
+	%=& -\beta \dpr{\psi}{x}  - R \grad^2 \psi+ F \dpr{}{y} \cos{(\pi y / B)}  \nonumber  \\
+	=& -\beta \dpr{\psi}{x}  - R \grad^2 \psi + \frac{F\pi}{B} \sin{(\pi y / B)}\nonumber  \\
+R \grad^2 \psi+\beta \dpr{\psi}{x}   
+	=&
+	 F\alpha \sin{(\alpha y )}
+\end{align}
+%%....................................................................
+...mit $ \alpha	= \frac{\pi}{B} $
+\end{frame}
+% ######################################################################
+
+% ######################################################################
+\begin{frame}
+\frametitle{Analytische Lösung möglich}
+Inhomogene partielle Differentialgleichung 2er Ordnung.
+%%....................................................................
+\begin{align}
+    R \grad^2 \psi+\beta \dpr{\psi}{x}   
+	=&
+	 F\alpha \sin{(\alpha y )}\nonumber 
+\end{align}
+%%....................................................................
+% TODO analy loesung zeigen
+% TODO bild!
+\end{frame}
+% ######################################################################
+
+% ######################################################################
+\begin{frame}
+\frametitle{Numerische Lösung}
+\begin{itemize}
+	\item
+	variable Beckenform
+	\item
+	variabler Windstress
+\end{itemize}
+%%....................................................................
+\begin{align}
+    R \grad^2 \psi+\beta \dpr{\psi}{x}   
+	=&
+	 W(x,y)
+\end{align}
+%%....................................................................
+% TODO bild!
+\end{frame}
+% ######################################################################
+
+% ######################################################################
+\begin{frame}
+\frametitle{Jacobi-Methode}
+Annahme: $\psi^{k=1}=rand$ überall
+%%....................................................................
+\begin{align}
+    R \grad^2 \psi^k_{i,j} + \beta \dpr{}{x}\psi^k_{i,j} - W_{i,j}
+    &=
+    \Phi_{i,j}
+\end{align}
+%%....................................................................
+
+%%....................................................................
+\begin{align}
+    R \grad^2 \psi^{k+1}_{i,j} + \beta \dpr{}{x} \psi^{k+1}_{i,j} - W_{i,j}
+    &=
+   0
+\end{align}
+%%....................................................................
+\end{frame}
+% ######################################################################
+
+
+
+
+
