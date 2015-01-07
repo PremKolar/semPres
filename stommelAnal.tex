@@ -77,11 +77,10 @@
 \begin{align}
 	0
 	=
-	%&      -f\vec{z} \times \vec{U}\; -    gH\grad{h} \;\;\;\;\;\;\; + \mathbf{\tau}_{s}\;\;\;\;\; - \mathbf{\tau}_{b}\;\;\;\;\;\;\;\;\;\;\;\;\; \;\;\;\; + A\grad^{2} \vec{U}  \nonumber \\
+	%&      -f\unitvec{z} \times \vec{U}\; -    gH\grad{h} \;\;\;\;\;\;\; + \mathbf{\tau}_{s}\;\;\;\;\; - \mathbf{\tau}_{b}\;\;\;\;\;\;\;\;\;\;\;\;\; \;\;\;\; + A\grad^{2} \vec{U}  \nonumber \\
 	%&-      Coriolis                -    Druckgrad.  +  Wind  - Bodenreibung  + laterale\; Reibung          \nonumber
-	&  -\l f_{0} + \beta y \r \vec{z} \times \vec{U} -    gH\grad{h}  + \mathbf{\tau}_{s} - \mathbf{\tau}_{b}+ A\grad^{2} \vec{U} 
+	&  -\l f_{0} + \beta y \r \unitvec{z} \times \vec{U} -    gH\grad{h}  + \mathbf{\tau}_{s} - \mathbf{\tau}_{b}+ A\grad^{2} \vec{U} 
 \end{align}
-
 %%....................................................................
 \begin{align}
 	\Dpr{\vec{U}}{t}
@@ -122,7 +121,7 @@
 \frametitle{Stromfunktion}
 %%....................................................................
 \begin{align}
- \vec{U}&=\gradt \psi(x,y) 
+ \vec{U}&=\tsca{\grad} \psi(x,y) 
 \end{align}
 %%...................................................................
 soll heißen...

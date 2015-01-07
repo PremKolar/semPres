@@ -1,4 +1,4 @@
-\beamer@endinputifotherversion {3.07pt}
+\beamer@endinputifotherversion {3.10pt}
 \select@language {english}
 \beamer@sectionintoc {2}{Teil I - Westliche Randströme}{3}{0}{1}
 \beamer@subsectionintoc {2}{1}{Analytisch}{3}{0}{1}
