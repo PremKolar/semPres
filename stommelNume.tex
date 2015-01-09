@@ -149,21 +149,48 @@ $k+1$:
 \begin{frame}
 \frametitle{Jacobi-Methode}
 einsetzen :
+\begin{tiny}
 %%....................................................................
 \begin{align}
-	\frac{\psi^{k}_{i+1,j} - 2 \psi^{k+1}_{i,j} + \psi^{k}_{i-1,j}}{\delta x^2}
+	%\frac{\psi^{k}_{i+1,j} - 2 \psi^{k+1}_{i,j} + \psi^{k}_{i-1,j}}{\delta x^2}
+%-
+	%\frac{\psi^{k}_{i+1,j} - 2 \psi^{k  }_{i,j} + \psi^{k}_{i-1,j}}{\delta x^2}
+%+ 
+	%\frac{\psi^{k}_{i,j+1} - 2 \psi^{k+1}_{i,j} + \psi^{k}_{i,j-1}}{\delta y^2}
+%-
+	%\frac{\psi^{k}_{i,j+1} - 2 \psi^{k  }_{i,j} + \psi^{k}_{i,j-1}}{\delta y^2}
+    %&=
+    %-\Phi_{i,j} 	\nonumber \\
+    	\frac{\psi^{k}_{i+1,j} - 2 \psi^{k+1}_{i,j} + \psi^{k}_{i-1,j}}{\delta x^2}
 -
 	\frac{\psi^{k}_{i+1,j} - 2 \psi^{k  }_{i,j} + \psi^{k}_{i-1,j}}{\delta x^2}
-+ \mathit{term_y}
++ 
+	...
     &=
-    -\Phi_{i,j} 	\nonumber
-\end{align}
-\pause
-\begin{align}
-	   \psi^{k+1}_{i,j}      
+    -\Phi_{i,j} 	\nonumber \\
+   \frac{ - 2 \psi^{k+1}_{i,j} 
+    + 2 \psi^{k  }_{i,j} }{\delta x^2}
++ 
+	\frac{- 2 \psi^{k+1}_{i,j} 
+	+ 2 \psi^{k  }_{i,j} }{\delta y^2}
     &=
-	\frac{\delta x}{2}\Phi_{i,j} +  \psi^{k}_{i,j}  	\nonumber
+    -\Phi_{i,j} 	\nonumber \\
+     2 \delta y^2 \l -\psi^{k+1}_{i,j} +  \psi^{k  }_{i,j} \r
++ 
+	  2 \delta x^2 \l- \psi^{k+1}_{i,j} +  \psi^{k  }_{i,j} \r
+    &=
+    -\Phi_{i,j} \delta y^2	\delta x^2\nonumber \\ 
+     2 \l \delta y^2 + \delta x^2 \r
+        \l  -\psi^{k+1}_{i,j} +  \psi^{k  }_{i,j}  \r    
+    &=
+    -\Phi_{i,j} \delta y^2	\delta x^2\nonumber \\      
+    \psi^{k+1}_{i,j}     
+    &=
+    \psi^{k  }_{i,j}   +    \Phi_{i,j} \frac{ \delta y^2	\delta x^2  }{2\l \delta y^2 + \delta x^2 \r}  \nonumber 
 \end{align}
 %%....................................................................
+\end{tiny}
 \end{frame}
 % ######################################################################
+
+s
